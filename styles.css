@@ -74,3 +74,38 @@ blockquote {
   font-style: italic;
   color: #333;
 }
+
+.player-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.player {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 15px;
+  border: 2px solid #007A33;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.player img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.player:hover {
+  background-color: #c7f9cc;
+  transform: scale(1.05);
+}
+
