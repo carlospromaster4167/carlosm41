@@ -96,3 +96,14 @@ a:hover {
   background-color: #c7f9cc;
   transform: scale(1.05);
 }
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #007a33;
+  color: #ffffff;
+  padding: 1rem;
+}
+
