@@ -97,7 +97,7 @@ a:hover {
   transform: scale(1.05);
 }
 .footer {
-  position: sticky;
+  position:
   bottom: 0;
   width: 100%;
   display: flex;
