@@ -12,8 +12,36 @@
   </head>
   <body>
     <nav>
-      <a href="page2.html" aria-current="page">Second page</a>
+      <a href="page2.html">Second page</a>
       <a href="page3.html" aria-current="page">Third page</a>
-      <a href="page4.html" aria-current="page">Fourth page</a>
+      <a href="page4.html">Fourth page</a>
     </nav>
     <main> Hello world</main>
+    <form name="myform"> 
+      <label>
+      Email: <input type="type" name="email" id="email">
+     </label>
+     <label for="other">The other input</label>
+      <input type="text" name="other">
+      <input type="submit" name="submitbutton">
+      <div style="display: flex;"> 
+      <Input type="checkbox" name="checkbox">
+    Option 1 </div>
+    <div style="display: flex;"> 
+      <Input type="checkbox" name="checkbox">
+    Option 2 </div>
+    
+      </div> 
+      <button id="myButton"> 
+        The Button
+      </button>
+      <input type="submit"onclick="formSubmit()"> 
+    <script>
+     function formSubmit() {
+          alert("Hi testing"); 
+          
+
+      
+    }
+    </script> 
+       </form>
