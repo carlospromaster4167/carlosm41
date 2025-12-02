@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
-    <meta name="description" content=".TBC" />
+    <title>Form Assignment</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
-    <style>
-      
-    </style>
   </head>
   <body>
     <nav>
@@ -16,32 +12,47 @@
       <a href="page3.html" aria-current="page">Third page</a>
       <a href="page4.html">Fourth page</a>
     </nav>
-    <main> Hello world</main>
-    <form name="myform"> 
-      <label>
-      Email: <input type="type" name="email" id="email">
-     </label>
-     <label for="other">The other input</label>
-      <input type="text" name="other">
-      <input type="submit" name="submitbutton">
-      <div style="display: flex;"> 
-      <Input type="checkbox" name="checkbox">
-    Option 1 </div>
-    <div style="display: flex;"> 
-      <Input type="checkbox" name="checkbox">
-    Option 2 </div>
-    
-      </div> 
-      <button id="myButton"> 
-        The Button
-      </button>
-      <input type="submit"onclick="formSubmit()"> 
-    <script>
-     function formSubmit() {
-          alert("Hi testing"); 
-          
 
-      
-    }
-    </script> 
-       </form>
+    <main>
+      <h2>Form Assignment</h2>
+
+      <form name="myform" onsubmit="formSubmit(event)">
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+
+        <label for="other">Other Input:</label>
+        <input type="text" name="other" id="other">
+
+        <label>Choose your options:</label>
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="checkbox" name="option1" id="option1">
+          <label for="option1">Option 1</label>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="checkbox" name="option2" id="option2">
+          <label for="option2">Option 2</label>
+        </div>
+
+        <label for="favorite">Choose a favorite item:</label>
+        <select name="favorite" id="favorite">
+          <option value="pizza">Pizza</option>
+          <option value="burger">Burger</option>
+          <option value="tacos">Tacos</option>
+        </select>
+
+        <button type="submit">Submit Form</button>
+
+      </form>
+    </main>
+
+    <script>
+      function formSubmit(event) {
+        event.preventDefault(); 
+        alert("Form Submitted! But I disagree.");
+      }
+    </script>
+
+  </body>
+</html>
