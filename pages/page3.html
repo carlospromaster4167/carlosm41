@@ -56,5 +56,24 @@
       }
     </script>
 
+    <label>Dark mode 
+      <input type="checkbox" onchange="toggleDarkMode()">
+    </label>
+    <script> 
+    let darkMode = false;
+     function toggleDarkMode() {
+      console.log("Dark mode initially is " + darkMode) ;
+      if (darkMode ==true){
+      darkMode = false;
+      document.body.style["backgroundColor"] = "#FFFFFF";
+      document.body.style["color"] = "#000000";
+     } else { 
+      darkMode = true; 
+      document.body.style["backgroundColor"] = "#000000";
+      document.body.style["color"] = "#FFFFFF";
+     }
+     console.log("Dark mode has been changed to " + darkMode) }
+    </script>
+
   </body>
 </html>
