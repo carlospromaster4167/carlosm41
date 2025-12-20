@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Form Assignment</title>
+    <title>Celtics Tuff Stuff - Fan Form</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" c`tent="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A fan interaction form where Boston Celtics fans can share preferences and customize site appearance."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
+
   <body>
     <nav>
       <a href="page2.html">Second page</a>
@@ -14,66 +19,77 @@
     </nav>
 
     <main>
-      <h2>Form Assignment</h2>
+      <h2>Celtics Fan Interaction Form</h2>
+      <p>
+        This page allows fans of the
+       Boston Celtics
+        to share preferences and interact with the website using JavaScript.
+      </p>
 
       <form name="myform" onsubmit="formSubmit(event)">
-        
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
-        <label for="other">Other Input:</label>
-        <input type="text" name="other" id="other">
+        <input type="text" id="email" name="email" />
 
-        <label>Choose your options:</label>
+        <label for="other">Favorite Celtics memory or moment:</label>
+        <input type="text" name="other" id="other" />
+
+        <label>Which parts of the game do you enjoy most:</label>
+
         <div style="display: flex; gap: 0.5rem;">
-          <input type="checkbox" name="option1" id="option1">
-          <label for="option1">Option 1</label>
+          <input type="checkbox" name="option1" id="option1" />
+          <label for="option1">Strong defense</label>
         </div>
 
         <div style="display: flex; gap: 0.5rem;">
-          <input type="checkbox" name="option2" id="option2">
-          <label for="option2">Option 2</label>
+          <input type="checkbox" name="option2" id="option2" />
+          <label for="option2">Three point shooting</label>
         </div>
 
-        <label for="favorite">Choose a favorite item:</label>
+        <label for="favorite">Favorite current Celtics player:</label>
         <select name="favorite" id="favorite">
-          <option value="pizza">Pizza</option>
-          <option value="burger">Burger</option>
-          <option value="tacos">Tacos</option>
+          <option value="tatum">Jayson Tatum</option>
+          <option value="brown">Jaylen Brown</option>
+          <option value="white">Derrick White</option>
+          <option value="pritchard">Payton Pritchard</option>
         </select>
 
         <button type="submit">Submit Form</button>
-
       </form>
+
+      <div style="margin-top: 1.5rem;">
+        <label>
+          Dark mode
+          <input type="checkbox" onchange="toggleDarkMode()" />
+        </label>
+      </div>
     </main>
 
-   
     <script>
-      function formSubmit() {
-        const nameInput = document.getElementById("email").value
-        console.log(nameInput)
+      function formSubmit(event) {
+        event.preventDefault();
 
-       alert("Thanks for submitting, " + nameInput + "!!!!")
+        const emailInput = document.getElementById("email").value;
+
+        if (emailInput !== "") {
+          alert("Thanks for supporting the Celtics, " + emailInput + "!");
+        } else {
+          alert("Please enter an email before submitting.");
+        }
+      }
+
+      let darkMode = false;
+
+      function toggleDarkMode() {
+        if (darkMode === true) {
+          darkMode = false;
+          document.body.style.backgroundColor = "#FFFFFF";
+          document.body.style.color = "#000000";
+        } else {
+          darkMode = true;
+          document.body.style.backgroundColor = "#000000";
+          document.body.style.color = "#FFFFFF";
+        }
       }
     </script>
-
-    <label>Dark mode 
-      <input type="checkbox" onchange="toggleDarkMode()">
-    </label>
-    <script> 
-    let darkMode = false;
-     function toggleDarkMode() {
-      console.log("Dark mode initially is " + darkMode) ;
-      if (darkMode ==true){
-      darkMode = false;
-      document.body.style["backgroundColor"] = "#FFFFFF";
-      document.body.style["color"] = "#000000";
-     } else { 
-      darkMode = true; 
-      document.body.style["backgroundColor"] = "#000000";
-      document.body.style["color"] = "#FFFFFF";
-     }
-     console.log("Dark mode has been changed to " + darkMode) }
-    </script>
-
   </body>
 </html>
